@@ -35,6 +35,7 @@ public class LinkedList {
 		}
 		System.out.println("\nSize = "+size);
 	}
+	
 	public void insertLast(int data) {
 		Node node = new Node(data);
 		tail.next=node;
