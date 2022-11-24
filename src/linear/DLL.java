@@ -51,4 +51,24 @@ public class DLL {
 		}
 		System.out.println("\nSize = "+size);
 	}
+	public void insertAround(int data1,int data2, int index) {
+		Node node1 = new Node(data1);
+		Node node2 = new Node(data2);
+		Node middle = get(index);
+		middle.prev.next=node1;
+		node1.prev=middle.prev;
+		node1.next=middle;
+		middle.prev=node1;
+		node2.next=middle.next;
+		node2.prev=middle;
+		middle.next=node2;
+		size+=2;
+	}
+	public Node get(int index) {
+		Node temp =head;
+		for(int i=0;i<index;i++) {
+			temp=temp.next;
+		}
+		return temp;
+	}
 }

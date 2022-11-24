@@ -18,10 +18,15 @@ public class Runner {
 			dll.insertFirst(data);
 		}
 		
-		
 		dll.show();
+		System.out.println("Enter index of middle:");
+		int index=sc.nextInt();
+		System.out.println("Enter 2 values");
+		int data1=sc.nextInt();
+		int data2=sc.nextInt();
+		dll.insertAround(data1, data2, index);
 		System.out.println("Reversed list");
-		dll.showReverse();
+		dll.show();
 		
 		
 		
