@@ -30,10 +30,10 @@ public class LinkedList {
 	public void show() {
 		Node temp=head;
 		while(temp!=null) {
-			System.out.println("  "+temp.data);
+			System.out.print("  "+temp.data);
 			temp=temp.next;
 		}
-		System.out.println("Size ="+size);
+		System.out.println("\nSize = "+size);
 	}
 	public void insertLast(int data) {
 		Node node = new Node(data);
@@ -79,5 +79,18 @@ public class LinkedList {
 			temp=temp.next;
 		}
 		return temp;
+	}
+	public int indexOfValue(int data) {
+		Node temp=head;
+		int index=0;
+		while(temp.next!=null) {
+			if(temp.data==data) {
+				return index;
+			}
+			index++;
+			temp=temp.next;
+		}
+		
+		return -1;
 	}
 }
