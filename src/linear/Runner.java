@@ -13,28 +13,20 @@ public class Runner {
 		ll.insertLast(30);
 		ll.insertFirst(7);
 		ll.show();
+		
 		//System.out.println("Deleting element at index 2 which is "+ll.delete(0));
 //		System.out.println("After delete");
 //		ll.show();
-		System.out.println("Enter value to delete:");
-		int target =sc.nextInt();
-		boolean success;
-		
-		int index=ll.indexOfValue(target);
-		if(index==-1) {
-			success=false;
-			System.out.println("DELETE STATUS:item not found");
-		}
-		else {
-			ll.delete(index);
-			success=true;
-			System.out.println("DELETE STATUS:success");
-		}
-		if(success) {
-		System.out.println("Current Array");
+		System.out.println("Enter value to insert at fist :");
+		int value =sc.nextInt();
+		ll.insertFirst(value);
+		System.out.println("Enter value to insert at fist :");
+		int value2 =sc.nextInt();
+		ll.insertLast(value2);
+		System.out.println("Linked List after inserting at first and last:\n");
 		ll.show();
-			System.out.println("index of deleted element " +target+" = "+index);
-		}
+		
+		
 		
 	}
 }
